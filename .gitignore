@@ -1,3 +1,6 @@
 data
 *.mp3
 __pycache__/
+.gitignore
+*.pickle
+*.p

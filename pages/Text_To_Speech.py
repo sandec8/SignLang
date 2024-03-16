@@ -6,7 +6,7 @@ import os
 st.set_page_config(page_title="Text-to-Speech Demo", page_icon="📈")
 
 def get_user_input():
-    user_input = st.text_input("Enter your text:")
+    user_input = st.text_area("Enter your text:")
     return user_input
 
 def translate_text(text, dest_language):
@@ -26,13 +26,16 @@ def speak_text(text, lang_code):
         # os.system("start output.mp3")
 
 def main():
-    st.title("Translator App")
+    st.title("Text-to-Speech App")
+    st.subheader("Text-to-Speech Demo")
+    st.write("This demo allows users to input text, and SignAWave will convert it into speech in the selected language.")
 
-    user_input = get_user_input()
     
     # Choose destination language
-    dest_language = st.selectbox("Select Destination Language:", ["Nepali", "Spanish", "French", "German"])
-    lang_codes = {"Nepali": "ne", "Spanish": "es", "French": "fr", "German": "de"}
+    dest_language = st.selectbox("Select Language:", ["English", "Nepali", "Spanish", "French"])
+    lang_codes = {"English": "en", "Nepali": "ne", "Spanish": "es", "French": "fr"}
+    
+    user_input = get_user_input()
     
     if user_input:
         st.subheader("Translation Result:")

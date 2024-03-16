@@ -7,8 +7,12 @@ import numpy as np
 
 
 data_dict = pickle.load(open('./data.pickle', 'rb'))
+# print(data_dict, "ma data dict ho")
+min_count = min(len(sublist) for sublist in data_dict["data"])
+trimmed_data = [sublist[:min_count] for sublist in data_dict["data"]]
 
-data = np.asarray(data_dict['data'])
+
+data = np.asarray(trimmed_data)
 labels = np.asarray(data_dict['labels'])
 
 x_train, x_test, y_train, y_test = train_test_split(data, labels, test_size=0.2, shuffle=True, stratify=labels)

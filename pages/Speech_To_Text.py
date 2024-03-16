@@ -92,3 +92,5 @@ playsound('audioCap.mp3')
 os.remove('audioCap.mp3')
 
 print(text)
+# st.subheader("Speech-to-Text Demo")
+# st.write("This demo enables users to speak into their microphone, and SignAWave will transcribe their speech into text.")
