@@ -27,7 +27,7 @@ def speak_text(text, lang_code):
 
 def main():
     st.title("Text-to-Speech App")
-    st.subheader("Text-to-Speech Demo")
+    st.subheader("🌟 Welcome to the Text-to-Speech demo!")
     st.write("This demo allows users to input text, and SignAWave will convert it into speech in the selected language.")
 
     
