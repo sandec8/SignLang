@@ -4,3 +4,8 @@ __pycache__/
 .gitignore
 *.pickle
 *.p
+newdata
+newdata2
+copyfiles.py
+collect_imgs.py
+inference_classifier.py
